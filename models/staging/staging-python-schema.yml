@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: stg_order
+    config:
+      schema: "{{env_var('DBT_STAGESCHEMA', 'STAGING_DEV')}}"

@@ -1,0 +1,7 @@
+models:
+  - name: stg_orderdetails
+    columns:
+      - name: orderid
+      
+
+
