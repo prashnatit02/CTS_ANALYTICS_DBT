@@ -8,9 +8,7 @@ config-version: 2
 
 vars:
   vcity: "'Madrid'"
-  dbt_dq_tool_schema: "{{env_var('DBT_AUDITSCHEMA', 'AUDITING_DEV')}}"
-  dq_tools_enable_store_test_results: True
-
+ 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'default'
 
@@ -29,7 +27,6 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
-on-run-end: "{{ dq_tools.store_test_results(results) }}"
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
